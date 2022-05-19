@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('/home/abrham/sys/views/head.ejs'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('/home/abrham/sys/views/header.ejs'); %>
+</header>
+
+<main>
+  <div class="jumbotron">
+    <h1>This is great</h1>
+    <p>Welcome to templating using EJS</p>
+
+    <h2>Variable</h2>
+    <p><%= host %></p>
+
+    <ul>
+      <% mascots.forEach(function(mascot) { %>
+        <li>
+          <strong><%= mascot.name %></strong>
+          representing <%= mascot.organization %>,
+          born <%= mascot.birth_year %>
+        </li>
+      <% }); %>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  <%- include('/home/abrham/sys/views/footer.ejs'); %>
+</footer>
+
+</body>
+</html>
